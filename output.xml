@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.10.6 on win32)" generated="20221109 16:33:23.955" rpa="false" schemaversion="3">
+<suite id="s1" name="Products" source="C:\Users\John Robert\PycharmProjects\P11_earnest\Tests\Products.robot">
+<test id="s1-t1" name="Open_Application" line="9">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=CPH2113</arg>
+<arg>appPackage=ph.mbtc.platform11.earnest.debug</arg>
+<arg>appActivity=ph.mbtc.platform11.earnest.ui.MainActivity</arg>
+<arg>automationName=Uiautomator2</arg>
+<arg>autoGrantPermissions=true</arg>
+<arg>newCommandTimeout=10000</arg>
+<arg>chromedriverExecutable=${chromedriverExecutable}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20221109 16:33:24.185" endtime="20221109 16:33:41.274"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221109 16:33:51.276" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20221109 16:33:41.275" endtime="20221109 16:33:51.276"/>
+</kw>
+<status status="PASS" starttime="20221109 16:33:24.185" endtime="20221109 16:33:51.278"/>
+</test>
+<test id="s1-t2" name="Login to Earnest" line="12">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${Primary_Btn_Login}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20221109 16:33:51.384" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/primary_button</msg>
+<status status="PASS" starttime="20221109 16:33:51.282" endtime="20221109 16:33:51.384"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Primary_Btn_Login}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221109 16:33:51.399" level="INFO">Clicking element 'ph.mbtc.platform11.earnest.debug:id/primary_button'.</msg>
+<msg timestamp="20221109 16:33:51.574" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/primary_button</msg>
+<status status="PASS" starttime="20221109 16:33:51.385" endtime="20221109 16:33:51.574"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${Close_AppBtn}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20221109 16:33:51.918" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/btn_close</msg>
+<status status="PASS" starttime="20221109 16:33:51.574" endtime="20221109 16:33:51.918"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Close_AppBtn}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221109 16:33:51.925" level="INFO">Clicking element 'ph.mbtc.platform11.earnest.debug:id/btn_close'.</msg>
+<msg timestamp="20221109 16:33:52.313" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/btn_close</msg>
+<status status="PASS" starttime="20221109 16:33:51.919" endtime="20221109 16:33:52.313"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221109 16:33:55.323" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221109 16:33:52.314" endtime="20221109 16:33:55.323"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${EmailField_LoginPage}</arg>
+<arg>${Valid_UserEmailAddress}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20221109 16:33:55.332" level="INFO">Typing text 'aut_sit009@getnada.com' into text field 'ph.mbtc.platform11.earnest.debug:id/emailField'</msg>
+<msg timestamp="20221109 16:33:55.606" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/emailField</msg>
+<status status="PASS" starttime="20221109 16:33:55.323" endtime="20221109 16:33:55.606"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${PassField_LoginPage}</arg>
+<arg>${Valid_UserPassword}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20221109 16:33:55.613" level="INFO">Typing text 'Test*123' into text field 'ph.mbtc.platform11.earnest.debug:id/passwordField'</msg>
+<msg timestamp="20221109 16:33:56.316" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/passwordField</msg>
+<status status="PASS" starttime="20221109 16:33:55.607" endtime="20221109 16:33:56.316"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${LoginBtn_LoginPage}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221109 16:33:56.327" level="INFO">Clicking element 'ph.mbtc.platform11.earnest.debug:id/loginButton'.</msg>
+<msg timestamp="20221109 16:33:57.706" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/loginButton</msg>
+<status status="PASS" starttime="20221109 16:33:56.317" endtime="20221109 16:33:57.706"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221109 16:34:17.715" level="INFO">Slept 20 seconds</msg>
+<status status="PASS" starttime="20221109 16:33:57.708" endtime="20221109 16:34:17.715"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BtnSubmit_OtpPage}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221109 16:34:17.726" level="INFO">Clicking element 'ph.mbtc.platform11.earnest.debug:id/btn_submit'.</msg>
+<msg timestamp="20221109 16:34:19.241" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/btn_submit</msg>
+<status status="PASS" starttime="20221109 16:34:17.717" endtime="20221109 16:34:19.242"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221109 16:34:24.255" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20221109 16:34:19.242" endtime="20221109 16:34:24.255"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${btn_Home_SkipBtn}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221109 16:34:24.262" level="INFO">Clicking element 'ph.mbtc.platform11.earnest.debug:id/btnSkip'.</msg>
+<msg timestamp="20221109 16:34:24.608" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/btnSkip</msg>
+<status status="PASS" starttime="20221109 16:34:24.256" endtime="20221109 16:34:24.608"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${Mbtc_welcome_layout}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20221109 16:34:27.759" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/welcomeLayout
+criteria is ph.mbtc.platform11.earnest.debug:id/welcomeLayout</msg>
+<status status="PASS" starttime="20221109 16:34:24.609" endtime="20221109 16:34:27.760"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Mbtc_welcome_layout}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221109 16:34:27.770" level="INFO">Clicking element 'ph.mbtc.platform11.earnest.debug:id/welcomeLayout'.</msg>
+<msg timestamp="20221109 16:34:50.911" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/welcomeLayout</msg>
+<status status="PASS" starttime="20221109 16:34:27.761" endtime="20221109 16:34:50.911"/>
+</kw>
+<status status="PASS" starttime="20221109 16:33:51.281" endtime="20221109 16:34:50.912"/>
+</test>
+<test id="s1-t3" name="View and Navigate to Products with no Risk Assessment" line="29">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Invest_Button_Home_Tab}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221109 16:34:50.920" level="INFO">Clicking element 'ph.mbtc.platform11.earnest.debug:id/investButton'.</msg>
+<msg timestamp="20221109 16:34:51.332" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/investButton</msg>
+<status status="PASS" starttime="20221109 16:34:50.914" endtime="20221109 16:34:51.332"/>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>${Invest_Label_Home_Tab}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20221109 16:34:51.773" level="INFO">Current page contains element '//android.widget.TextView[@text = 'Invest']'.</msg>
+<msg timestamp="20221109 16:34:51.773" level="INFO">xpath criteria: //android.widget.TextView[@text = 'Invest']</msg>
+<status status="PASS" starttime="20221109 16:34:51.333" endtime="20221109 16:34:51.773"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Invest_Button_Home_Tab}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221109 16:34:51.779" level="INFO">Clicking element 'ph.mbtc.platform11.earnest.debug:id/investButton'.</msg>
+<msg timestamp="20221109 16:34:52.860" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/investButton</msg>
+<status status="PASS" starttime="20221109 16:34:51.773" endtime="20221109 16:34:52.860"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${Invest_Title_header}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20221109 16:34:53.119" level="INFO">xpath criteria: //android.widget.TextView[@text = 'Invest']</msg>
+<status status="PASS" starttime="20221109 16:34:52.861" endtime="20221109 16:34:53.119"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Products_Tab}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221109 16:34:53.126" level="INFO">Clicking element '//android.widget.TextView[@text = 'Products']'.</msg>
+<msg timestamp="20221109 16:34:53.427" level="INFO">xpath criteria: //android.widget.TextView[@text = 'Products']</msg>
+<status status="PASS" starttime="20221109 16:34:53.119" endtime="20221109 16:34:53.427"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${Product_filter_All}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20221109 16:34:54.811" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/button_filter_all
+criteria is ph.mbtc.platform11.earnest.debug:id/button_filter_all</msg>
+<status status="PASS" starttime="20221109 16:34:53.427" endtime="20221109 16:34:54.811"/>
+</kw>
+<status status="PASS" starttime="20221109 16:34:50.913" endtime="20221109 16:34:54.811"/>
+</test>
+<test id="s1-t4" name="Accessing Product Profile" line="117">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Product_filter_Moderate}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221109 16:34:54.817" level="INFO">Clicking element 'ph.mbtc.platform11.earnest.debug:id/button_filter_moderate'.</msg>
+<msg timestamp="20221109 16:34:55.192" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/button_filter_moderate</msg>
+<status status="PASS" starttime="20221109 16:34:54.813" endtime="20221109 16:34:55.192"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Metro_Max_3_name}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221109 16:34:55.198" level="INFO">Clicking element '//android.widget.TextView[@text = 'Metro Max-3 Bond Fund']'.</msg>
+<msg timestamp="20221109 16:34:55.977" level="INFO">xpath criteria: //android.widget.TextView[@text = 'Metro Max-3 Bond Fund']</msg>
+<status status="PASS" starttime="20221109 16:34:55.193" endtime="20221109 16:34:55.977"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${Product_Profile_CloseBtn}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20221109 16:34:57.045" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/closeButton</msg>
+<status status="PASS" starttime="20221109 16:34:55.978" endtime="20221109 16:34:57.045"/>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<arg>${Product_Profile_CloseBtn}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<msg timestamp="20221109 16:34:58.252" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/closeButton</msg>
+<status status="PASS" starttime="20221109 16:34:57.046" endtime="20221109 16:34:58.252"/>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<arg>${Product_Profile_ShareBtn}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<msg timestamp="20221109 16:34:58.551" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/shareButton</msg>
+<status status="PASS" starttime="20221109 16:34:58.258" endtime="20221109 16:34:58.551"/>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${Get_Product_name_risk_Label}</var>
+<arg>${Product_profile_RA}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20221109 16:34:58.764" level="INFO">Element 'ph.mbtc.platform11.earnest.debug:id/productRiskLabel' text is 'MODERATE' </msg>
+<msg timestamp="20221109 16:34:58.764" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/productRiskLabel</msg>
+<msg timestamp="20221109 16:34:58.764" level="INFO">${Get_Product_name_risk_Label} = MODERATE</msg>
+<status status="PASS" starttime="20221109 16:34:58.551" endtime="20221109 16:34:58.764"/>
+</kw>
+<kw name="Page Should Contain Text" library="AppiumLibrary">
+<arg>${Get_Product_name_risk_Label}</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<msg timestamp="20221109 16:34:59.126" level="INFO">Current page contains text 'MODERATE'.</msg>
+<status status="PASS" starttime="20221109 16:34:58.764" endtime="20221109 16:34:59.126"/>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<arg>${Product_profile_RA_tooltip}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<msg timestamp="20221109 16:34:59.414" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/icproduckRiskTooltip</msg>
+<status status="PASS" starttime="20221109 16:34:59.126" endtime="20221109 16:34:59.414"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Product_profile_RA_tooltip}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221109 16:34:59.421" level="INFO">Clicking element 'ph.mbtc.platform11.earnest.debug:id/icproduckRiskTooltip'.</msg>
+<msg timestamp="20221109 16:35:01.204" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/icproduckRiskTooltip</msg>
+<status status="PASS" starttime="20221109 16:34:59.415" endtime="20221109 16:35:01.204"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${Product_profile_Tooltip_title}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20221109 16:35:02.105" level="INFO">xpath criteria: //android.widget.TextView[@text = 'Moderate Fund']
+xpath criteria: //android.widget.TextView[@text = 'Moderate Fund']</msg>
+<status status="PASS" starttime="20221109 16:35:01.204" endtime="20221109 16:35:02.105"/>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>${Product_profile_Tooltip_title}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20221109 16:35:02.208" level="INFO">Current page contains element '//android.widget.TextView[@text = 'Moderate Fund']'.</msg>
+<msg timestamp="20221109 16:35:02.208" level="INFO">xpath criteria: //android.widget.TextView[@text = 'Moderate Fund']</msg>
+<status status="PASS" starttime="20221109 16:35:02.106" endtime="20221109 16:35:02.208"/>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>${Product_profile_Tooltip_Desc}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20221109 16:35:02.286" level="INFO">Current page contains element '//android.widget.TextView[@text = 'This fund is recommended for moderate investors. Medium risk, medium potential reward.']'.</msg>
+<msg timestamp="20221109 16:35:02.286" level="INFO">xpath criteria: //android.widget.TextView[@text = 'This fund is recommended for moderate investors. Medium risk, medium potential reward.']</msg>
+<status status="PASS" starttime="20221109 16:35:02.208" endtime="20221109 16:35:02.286"/>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<arg>${Product_profile_Tooltip_Xicon}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<msg timestamp="20221109 16:35:02.360" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/btnClose</msg>
+<status status="PASS" starttime="20221109 16:35:02.286" endtime="20221109 16:35:02.360"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Product_profile_Tooltip_Xicon}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221109 16:35:02.366" level="INFO">Clicking element 'ph.mbtc.platform11.earnest.debug:id/btnClose'.</msg>
+<msg timestamp="20221109 16:35:02.510" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/btnClose</msg>
+<status status="PASS" starttime="20221109 16:35:02.360" endtime="20221109 16:35:02.510"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${Product_profile_NAVPU_Chart}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20221109 16:35:02.905" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/navpu_chart</msg>
+<status status="PASS" starttime="20221109 16:35:02.510" endtime="20221109 16:35:02.905"/>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${Get_Product_name_ProductProfile}</var>
+<arg>${Product_profile_FundName}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20221109 16:35:03.396" level="INFO">Element 'ph.mbtc.platform11.earnest.debug:id/productName' text is 'Metro Max-3 Bond Fund' </msg>
+<msg timestamp="20221109 16:35:03.396" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/productName</msg>
+<msg timestamp="20221109 16:35:03.396" level="INFO">${Get_Product_name_ProductProfile} = Metro Max-3 Bond Fund</msg>
+<status status="PASS" starttime="20221109 16:35:02.906" endtime="20221109 16:35:03.396"/>
+</kw>
+<kw name="Page Should Contain Text" library="AppiumLibrary">
+<arg>${Get_Product_name_ProductProfile}</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<msg timestamp="20221109 16:35:03.783" level="INFO">Current page contains text 'Metro Max-3 Bond Fund'.</msg>
+<status status="PASS" starttime="20221109 16:35:03.397" endtime="20221109 16:35:03.783"/>
+</kw>
+<kw name="Page Should Contain Text" library="AppiumLibrary">
+<arg>${Product_profile_Chart_Name}</arg>
+<arg>Fund Historical Performance</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<msg timestamp="20221109 16:35:04.120" level="INFO">Current page contains text 'ph.mbtc.platform11.earnest.debug:id/chartLabel'.</msg>
+<status status="PASS" starttime="20221109 16:35:03.783" endtime="20221109 16:35:04.120"/>
+</kw>
+<kw name="Page Should Contain Text" library="AppiumLibrary">
+<arg>${Product_profile_NAVPU_Label}</arg>
+<arg>NAVPU</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<msg timestamp="20221109 16:35:04.444" level="INFO">Current page contains text 'ph.mbtc.platform11.earnest.debug:id/navpuTitle'.</msg>
+<status status="PASS" starttime="20221109 16:35:04.121" endtime="20221109 16:35:04.445"/>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<arg>${Product_profile_NAVPU_Chart}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<msg timestamp="20221109 16:35:04.562" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/navpu_chart</msg>
+<status status="PASS" starttime="20221109 16:35:04.445" endtime="20221109 16:35:04.562"/>
+</kw>
+<kw name="Page Should Contain Text" library="AppiumLibrary">
+<arg>${Product_profile_1YrBtn}</arg>
+<arg>1Y</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<msg timestamp="20221109 16:35:04.867" level="INFO">Current page contains text 'ph.mbtc.platform11.earnest.debug:id/one_year'.</msg>
+<status status="PASS" starttime="20221109 16:35:04.562" endtime="20221109 16:35:04.867"/>
+</kw>
+<kw name="Page Should Contain Text" library="AppiumLibrary">
+<arg>${Product_profile_3YrBtn}</arg>
+<arg>3Y</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<msg timestamp="20221109 16:35:05.174" level="INFO">Current page contains text 'ph.mbtc.platform11.earnest.debug:id/three_year'.</msg>
+<status status="PASS" starttime="20221109 16:35:04.868" endtime="20221109 16:35:05.174"/>
+</kw>
+<kw name="Page Should Contain Text" library="AppiumLibrary">
+<arg>${Product_profile_5YrBtn}</arg>
+<arg>5Y</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<msg timestamp="20221109 16:35:05.457" level="INFO">Current page contains text 'ph.mbtc.platform11.earnest.debug:id/five_year'.</msg>
+<status status="PASS" starttime="20221109 16:35:05.175" endtime="20221109 16:35:05.457"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Product_profile_1YrBtn}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221109 16:35:05.464" level="INFO">Clicking element 'ph.mbtc.platform11.earnest.debug:id/one_year'.</msg>
+<msg timestamp="20221109 16:35:06.381" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/one_year</msg>
+<status status="PASS" starttime="20221109 16:35:05.458" endtime="20221109 16:35:06.381"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Product_profile_5YrBtn}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221109 16:35:06.401" level="INFO">Clicking element 'ph.mbtc.platform11.earnest.debug:id/five_year'.</msg>
+<msg timestamp="20221109 16:35:07.295" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/five_year</msg>
+<status status="PASS" starttime="20221109 16:35:06.382" endtime="20221109 16:35:07.295"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Fast_Scroll_Btn}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221109 16:35:07.311" level="INFO">Clicking element 'ph.mbtc.platform11.earnest.debug:id/fastScrollButton'.</msg>
+<msg timestamp="20221109 16:35:07.662" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/fastScrollButton</msg>
+<status status="PASS" starttime="20221109 16:35:07.295" endtime="20221109 16:35:07.663"/>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<arg>${Time_Horizon_Card_img}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<msg timestamp="20221109 16:35:08.792" level="INFO">xpath criteria: //*[@bounds='[618,1000][762,1144]']</msg>
+<status status="PASS" starttime="20221109 16:35:07.664" endtime="20221109 16:35:08.792"/>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${Get_Time_Horizon_Card_Year}</var>
+<arg>${Time_Horizon_Card_Year}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20221109 16:35:09.130" level="INFO">Element '//*[@bounds='[618,1192][755,1257]']' text is '1 year' </msg>
+<msg timestamp="20221109 16:35:09.130" level="INFO">xpath criteria: //*[@bounds='[618,1192][755,1257]']</msg>
+<msg timestamp="20221109 16:35:09.130" level="INFO">${Get_Time_Horizon_Card_Year} = 1 year</msg>
+<status status="PASS" starttime="20221109 16:35:08.792" endtime="20221109 16:35:09.130"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${Time_Horizon_Card_Year}</arg>
+<arg>1 year</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20221109 16:35:09.130" level="INFO">Verifying element '//*[@bounds='[618,1192][755,1257]']' contains exactly text '1 year'.</msg>
+<msg timestamp="20221109 16:35:09.471" level="INFO">xpath criteria: //*[@bounds='[618,1192][755,1257]']</msg>
+<status status="PASS" starttime="20221109 16:35:09.130" endtime="20221109 16:35:09.471"/>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${Get_Time_Horizon_Card_Label}</var>
+<arg>${Time_Horizon_Card_Label}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20221109 16:35:09.774" level="INFO">Element '//*[@bounds='[618,1269][972,1326]']' text is 'Time Horizon' </msg>
+<msg timestamp="20221109 16:35:09.774" level="INFO">xpath criteria: //*[@bounds='[618,1269][972,1326]']</msg>
+<msg timestamp="20221109 16:35:09.774" level="INFO">${Get_Time_Horizon_Card_Label} = Time Horizon</msg>
+<status status="PASS" starttime="20221109 16:35:09.472" endtime="20221109 16:35:09.774"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${Time_Horizon_Card_Label}</arg>
+<arg>Time Horizon</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20221109 16:35:09.780" level="INFO">Verifying element '//*[@bounds='[618,1269][972,1326]']' contains exactly text 'Time Horizon'.</msg>
+<msg timestamp="20221109 16:35:10.132" level="INFO">xpath criteria: //*[@bounds='[618,1269][972,1326]']</msg>
+<status status="PASS" starttime="20221109 16:35:09.774" endtime="20221109 16:35:10.133"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Time_Horizon_Tooltip}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221109 16:35:10.140" level="INFO">Clicking element '//*[@bounds='[906,1000][972,1066]']'.</msg>
+<msg timestamp="20221109 16:35:10.570" level="INFO">xpath criteria: //*[@bounds='[906,1000][972,1066]']</msg>
+<status status="PASS" starttime="20221109 16:35:10.133" endtime="20221109 16:35:10.571"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${Time_Horizon_Tooltip_title}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20221109 16:35:11.531" level="INFO">xpath criteria: //android.widget.TextView[@text = 'Time Horizon']</msg>
+<status status="PASS" starttime="20221109 16:35:10.571" endtime="20221109 16:35:11.531"/>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>${Time_Horizon_Tooltip_title}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20221109 16:35:11.876" level="INFO">Current page contains element '//android.widget.TextView[@text = 'Time Horizon']'.</msg>
+<msg timestamp="20221109 16:35:11.876" level="INFO">xpath criteria: //android.widget.TextView[@text = 'Time Horizon']</msg>
+<status status="PASS" starttime="20221109 16:35:11.531" endtime="20221109 16:35:11.876"/>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>${Time_Horizon_Tooltip_Msg}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20221109 16:35:12.231" level="INFO">Current page contains element '//android.widget.TextView[@text = 'We recommend that you leave your money in the investment for at least this long to get the best results.']'.</msg>
+<msg timestamp="20221109 16:35:12.231" level="INFO">xpath criteria: //android.widget.TextView[@text = 'We recommend that you leave your money in the investment for at least this long to get the best results.']</msg>
+<status status="PASS" starttime="20221109 16:35:11.876" endtime="20221109 16:35:12.231"/>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<arg>${Navpu_Tooltip_Content_XBtn}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<msg timestamp="20221109 16:35:12.499" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/btnClose</msg>
+<status status="PASS" starttime="20221109 16:35:12.232" endtime="20221109 16:35:12.499"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Navpu_Tooltip_Content_XBtn}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221109 16:35:12.499" level="INFO">Clicking element 'ph.mbtc.platform11.earnest.debug:id/btnClose'.</msg>
+<msg timestamp="20221109 16:35:13.462" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/btnClose</msg>
+<status status="PASS" starttime="20221109 16:35:12.499" endtime="20221109 16:35:13.462"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${What_It_is_Label}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20221109 16:35:13.770" level="INFO">xpath criteria: //android.widget.TextView[@text = 'What it is']</msg>
+<status status="PASS" starttime="20221109 16:35:13.463" endtime="20221109 16:35:13.770"/>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<arg>${Risk_Profile_Imge}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<msg timestamp="20221109 16:35:14.045" level="INFO">xpath criteria: //*[@bounds='[108,1534][252,1678]']</msg>
+<status status="PASS" starttime="20221109 16:35:13.771" endtime="20221109 16:35:14.045"/>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<arg>${Risk_Profile_Tooltip}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<msg timestamp="20221109 16:35:14.372" level="INFO">xpath criteria: //*[@bounds='[396,1534][462,1600]']</msg>
+<status status="PASS" starttime="20221109 16:35:14.045" endtime="20221109 16:35:14.372"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Risk_Profile_Tooltip}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221109 16:35:14.378" level="INFO">Clicking element '//*[@bounds='[396,1534][462,1600]']'.</msg>
+<msg timestamp="20221109 16:35:14.824" level="INFO">xpath criteria: //*[@bounds='[396,1534][462,1600]']</msg>
+<status status="PASS" starttime="20221109 16:35:14.373" endtime="20221109 16:35:14.824"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${Risk_profile_Tooltip_Title}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20221109 16:35:15.068" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/txt_tooltip_title</msg>
+<status status="PASS" starttime="20221109 16:35:14.825" endtime="20221109 16:35:15.068"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${Risk_profile_Tooltip_Title}</arg>
+<arg>Risk Profile</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20221109 16:35:15.076" level="INFO">Verifying element 'ph.mbtc.platform11.earnest.debug:id/txt_tooltip_title' contains exactly text 'Risk Profile'.</msg>
+<msg timestamp="20221109 16:35:15.729" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/txt_tooltip_title</msg>
+<status status="PASS" starttime="20221109 16:35:15.069" endtime="20221109 16:35:15.729"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${Risk_profile_Tooltip_Msg}</arg>
+<arg>This fund is recommended for moderate investors. Medium risk, medium potential reward.</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20221109 16:35:15.741" level="INFO">Verifying element 'ph.mbtc.platform11.earnest.debug:id/txt_tooltip_message' contains exactly text 'This fund is recommended for moderate investors. Medium risk, medium potential reward.'.</msg>
+<msg timestamp="20221109 16:35:16.067" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/txt_tooltip_message</msg>
+<status status="PASS" starttime="20221109 16:35:15.730" endtime="20221109 16:35:16.067"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Risk_profile_Tooltip_Xicon}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221109 16:35:16.074" level="INFO">Clicking element 'ph.mbtc.platform11.earnest.debug:id/btnClose'.</msg>
+<msg timestamp="20221109 16:35:16.373" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/btnClose</msg>
+<status status="PASS" starttime="20221109 16:35:16.068" endtime="20221109 16:35:16.373"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${Product_profile_Header_ID}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20221109 16:35:17.205" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/toolbarTitle</msg>
+<status status="PASS" starttime="20221109 16:35:16.374" endtime="20221109 16:35:17.205"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${Risk_Profile_Title}</arg>
+<arg>Moderate</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20221109 16:35:17.222" level="INFO">Verifying element '//*[@bounds='[108,1726][327,1791]']' contains exactly text 'Moderate'.</msg>
+<msg timestamp="20221109 16:35:17.589" level="INFO">xpath criteria: //*[@bounds='[108,1726][327,1791]']</msg>
+<status status="PASS" starttime="20221109 16:35:17.207" endtime="20221109 16:35:17.589"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${Risk_Profile_Label}</arg>
+<arg>Risk Profile</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20221109 16:35:17.596" level="INFO">Verifying element '//*[@bounds='[108,1803][462,1860]']' contains exactly text 'Risk Profile'.</msg>
+<msg timestamp="20221109 16:35:17.890" level="INFO">xpath criteria: //*[@bounds='[108,1803][462,1860]']</msg>
+<status status="PASS" starttime="20221109 16:35:17.590" endtime="20221109 16:35:17.890"/>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<arg>${Bonds_Image}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<msg timestamp="20221109 16:35:18.203" level="INFO">xpath criteria: //*[@bounds='[618,1534][762,1678]']</msg>
+<status status="PASS" starttime="20221109 16:35:17.891" endtime="20221109 16:35:18.203"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${Bonds_Label}</arg>
+<arg>Bonds</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20221109 16:35:18.210" level="INFO">Verifying element '//*[@bounds='[618,1726][759,1791]']' contains exactly text 'Bonds'.</msg>
+<msg timestamp="20221109 16:35:18.552" level="INFO">xpath criteria: //*[@bounds='[618,1726][759,1791]']</msg>
+<status status="PASS" starttime="20221109 16:35:18.204" endtime="20221109 16:35:18.553"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${Bonds_Assets}</arg>
+<arg>Assets</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20221109 16:35:18.559" level="INFO">Verifying element '//*[@bounds='[618,1803][972,1860]']' contains exactly text 'Assets'.</msg>
+<msg timestamp="20221109 16:35:18.922" level="INFO">xpath criteria: //*[@bounds='[618,1803][972,1860]']</msg>
+<status status="PASS" starttime="20221109 16:35:18.553" endtime="20221109 16:35:18.922"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Bonds_Tooltip}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221109 16:35:18.929" level="INFO">Clicking element '//*[@bounds='[906,1534][972,1600]']'.</msg>
+<msg timestamp="20221109 16:35:19.389" level="INFO">xpath criteria: //*[@bounds='[906,1534][972,1600]']</msg>
+<status status="PASS" starttime="20221109 16:35:18.923" endtime="20221109 16:35:19.390"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${Bonds_Tooltip_Title}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20221109 16:35:19.678" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/txt_tooltip_title</msg>
+<status status="PASS" starttime="20221109 16:35:19.390" endtime="20221109 16:35:19.678"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${Bonds_Tooltip_Title}</arg>
+<arg>Assets</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20221109 16:35:19.687" level="INFO">Verifying element 'ph.mbtc.platform11.earnest.debug:id/txt_tooltip_title' contains exactly text 'Assets'.</msg>
+<msg timestamp="20221109 16:35:20.265" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/txt_tooltip_title</msg>
+<status status="PASS" starttime="20221109 16:35:19.678" endtime="20221109 16:35:20.265"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${Bonds_Tooltip_Msg}</arg>
+<arg>This fund contains bonds, which are greatly affected by interest rates. Don't forget that bonds and interest rates have an inverse relationship.</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20221109 16:35:20.274" level="INFO">Verifying element 'ph.mbtc.platform11.earnest.debug:id/txt_tooltip_message' contains exactly text 'This fund contains bonds, which are greatly affected by interest rates. Don't forget that bonds and interest rates have an inverse relationship.'.</msg>
+<msg timestamp="20221109 16:35:20.546" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/txt_tooltip_message</msg>
+<status status="PASS" starttime="20221109 16:35:20.265" endtime="20221109 16:35:20.547"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Bonds_Tooltip_Title_Xicon}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221109 16:35:20.553" level="INFO">Clicking element 'ph.mbtc.platform11.earnest.debug:id/btnClose'.</msg>
+<msg timestamp="20221109 16:35:21.475" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/btnClose</msg>
+<status status="PASS" starttime="20221109 16:35:20.547" endtime="20221109 16:35:21.475"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${Product_profile_Header_ID}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20221109 16:35:21.720" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/toolbarTitle</msg>
+<status status="PASS" starttime="20221109 16:35:21.476" endtime="20221109 16:35:21.720"/>
+</kw>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>0</arg>
+<arg>600</arg>
+<arg>100</arg>
+<arg>100</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20221109 16:35:21.721" endtime="20221109 16:35:23.067"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${1day_label}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20221109 16:35:24.026" level="INFO">xpath criteria: //android.widget.TextView[@text = '1 day']</msg>
+<status status="PASS" starttime="20221109 16:35:23.068" endtime="20221109 16:35:24.026"/>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<arg>${Days_to_withrew_Img}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<msg timestamp="20221109 16:35:24.758" level="INFO">xpath criteria: //android.widget.LinearLayout[5]//android.widget.ImageView</msg>
+<status status="PASS" starttime="20221109 16:35:24.027" endtime="20221109 16:35:24.758"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${Days_to_withrew_1day}</arg>
+<arg>1 day</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20221109 16:35:24.765" level="INFO">Verifying element '//android.widget.LinearLayout[5]//android.widget.TextView[1]' contains exactly text '1 day'.</msg>
+<msg timestamp="20221109 16:35:25.000" level="INFO">xpath criteria: //android.widget.LinearLayout[5]//android.widget.TextView[1]</msg>
+<status status="PASS" starttime="20221109 16:35:24.759" endtime="20221109 16:35:25.001"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${Days_to_withrew_Label}</arg>
+<arg>Days to Withdraw</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20221109 16:35:25.007" level="INFO">Verifying element '//android.widget.LinearLayout[5]//android.widget.TextView[2]' contains exactly text 'Days to Withdraw'.</msg>
+<msg timestamp="20221109 16:35:26.215" level="INFO">xpath criteria: //android.widget.LinearLayout[5]//android.widget.TextView[2]</msg>
+<status status="PASS" starttime="20221109 16:35:25.001" endtime="20221109 16:35:26.215"/>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<arg>${Trust_fee_img}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<msg timestamp="20221109 16:35:26.415" level="INFO">xpath criteria: //android.widget.LinearLayout[6]//android.widget.ImageView[1]</msg>
+<status status="PASS" starttime="20221109 16:35:26.217" endtime="20221109 16:35:26.415"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${Trust_fee_per_annum}</arg>
+<arg>0.75% per annum</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20221109 16:35:26.421" level="INFO">Verifying element '//android.widget.LinearLayout[6]//android.widget.TextView[1]' contains exactly text '0.75% per annum'.</msg>
+<msg timestamp="20221109 16:35:26.696" level="INFO">xpath criteria: //android.widget.LinearLayout[6]//android.widget.TextView[1]</msg>
+<status status="PASS" starttime="20221109 16:35:26.416" endtime="20221109 16:35:26.696"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${Trust_fee_Label}</arg>
+<arg>Trust Fee</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20221109 16:35:26.702" level="INFO">Verifying element '//android.widget.LinearLayout[6]//android.widget.TextView[2]' contains exactly text 'Trust Fee'.</msg>
+<msg timestamp="20221109 16:35:27.028" level="INFO">xpath criteria: //android.widget.LinearLayout[6]//android.widget.TextView[2]</msg>
+<status status="PASS" starttime="20221109 16:35:26.697" endtime="20221109 16:35:27.028"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Trust_fee_tooltip}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221109 16:35:27.034" level="INFO">Clicking element '//android.widget.LinearLayout[6]//android.widget.ImageView[2]'.</msg>
+<msg timestamp="20221109 16:35:27.437" level="INFO">xpath criteria: //android.widget.LinearLayout[6]//android.widget.ImageView[2]</msg>
+<status status="PASS" starttime="20221109 16:35:27.029" endtime="20221109 16:35:27.437"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${Trust_fee_tooltip_title}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20221109 16:35:28.252" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/txt_tooltip_title</msg>
+<status status="PASS" starttime="20221109 16:35:27.437" endtime="20221109 16:35:28.252"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${Trust_fee_tooltip_title}</arg>
+<arg>Trust Fee</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20221109 16:35:28.270" level="INFO">Verifying element 'ph.mbtc.platform11.earnest.debug:id/txt_tooltip_title' contains exactly text 'Trust Fee'.</msg>
+<msg timestamp="20221109 16:35:28.534" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/txt_tooltip_title</msg>
+<status status="PASS" starttime="20221109 16:35:28.253" endtime="20221109 16:35:28.534"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${Trust_fee_tooltip_msg}</arg>
+<arg>This is the fee for management of the fund. It is based on the fund’s Net Asset Value Per Unit (NAVPU).</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20221109 16:35:28.541" level="INFO">Verifying element 'ph.mbtc.platform11.earnest.debug:id/txt_tooltip_message' contains exactly text 'This is the fee for management of the fund. It is based on the fund’s Net Asset Value Per Unit (NAVPU).'.</msg>
+<msg timestamp="20221109 16:35:28.716" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/txt_tooltip_message</msg>
+<status status="PASS" starttime="20221109 16:35:28.535" endtime="20221109 16:35:28.716"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Trust_fee_Xicon}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221109 16:35:28.723" level="INFO">Clicking element 'ph.mbtc.platform11.earnest.debug:id/btnClose'.</msg>
+<msg timestamp="20221109 16:35:29.521" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/btnClose</msg>
+<status status="PASS" starttime="20221109 16:35:28.716" endtime="20221109 16:35:29.522"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${Product_profile_Header_ID}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20221109 16:35:29.685" level="INFO">criteria is ph.mbtc.platform11.earnest.debug:id/toolbarTitle</msg>
+<status status="PASS" starttime="20221109 16:35:29.523" endtime="20221109 16:35:29.685"/>
+</kw>
+<status status="PASS" starttime="20221109 16:34:54.813" endtime="20221109 16:35:29.685"/>
+</test>
+<status status="PASS" starttime="20221109 16:33:23.955" endtime="20221109 16:35:29.686"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Products">Products</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
